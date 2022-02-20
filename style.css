@@ -1,4 +1,32 @@
-body {background-color:tan;}
-h1{color:green;}
+html
+{
+    background-color: black;
+    font-family: sans-serif;
+}
 
+h1{
+    font-weight: bold;
+    color: grey;
+}
 
+div
+{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main
+{   
+    border-radius: 25px;
+    width: 40%;
+    padding: 1%;
+}
+.sub
+{
+    width: 70%;
+}
+
+span.yellow
+{
+    background-color: #ffff7e;
+}

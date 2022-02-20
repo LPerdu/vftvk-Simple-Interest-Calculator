@@ -1,16 +1,62 @@
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <div class="main">
+            <h1>Simple Interest Calculator</h1>
+            <div class="sub">
+                <table>
+                    <form>
+                        <tr>
+                            <td>
+                                <label for="principal_input">Amount</label>
+                            </td>
+                            <td>
+                                <input type="number" id="principal_input" min="0" value="1000000"> <!-- Principal amount cannot be negative -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="rate_range">Interest Rate</label>
+                            </td>
+                            <td>
+                                <input type="range" id="rate_range" step = "0.005" min="0" max="0.25" value="0.035" oninput="display_selected_rate()"> <!-- Interest rate cannot be negative -->
+                            </td>
+                            <td>
+                                <p id="rate_par">3.5%</p> <!-- Consistent with rate range's default value but will be dynamically updated -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nb_years_dropdown">No. of Years</label>
+                            </td>
+                            <td>
+                                <select id="nb_years_dropdown" name="nb_years_dropdown">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5" selected>5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" onclick="compute_interest()">Compute Interest</button>
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                <p id="results_par"></p>
+            </div>
+            <p>&copy Everyone Can Get Rich</p>
+        </div>
     </body>
 </html>
