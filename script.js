@@ -17,10 +17,10 @@ function compute_interest()
     Computes the interests due and displays the results
     */
 
-    // We check that a principal amount has been provided, otherwise nothing happens
+    // We check that a positive principal amount has been provided, otherwise we warn the user
     principal = parseInt(document.getElementById("principal_input").value);
-    if (isNaN(principal)) {
-        alert("A positive principal amount must be provided !");
+    if (isNaN(principal) || (principal<=0)) {
+        alert("Please enter a positive principal amount");
         document.getElementById("principal_input").focus();
     }
 
