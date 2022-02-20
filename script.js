@@ -20,7 +20,8 @@ function compute_interest()
     // We check that a principal amount has been provided, otherwise nothing happens
     principal = parseInt(document.getElementById("principal_input").value);
     if (isNaN(principal)) {
-        alert("Principal amount must be provided !");
+        alert("A positive principal amount must be provided !");
+        document.getElementById("principal_input").focus();
     }
 
     else {

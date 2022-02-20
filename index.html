@@ -2,6 +2,7 @@
     <head>
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
+        <title>Web App - Simple Interest Calculator</title>
     </head>
     <body>
         <div class="main">
@@ -14,7 +15,7 @@
                                 <label for="principal_input">Amount</label>
                             </td>
                             <td>
-                                <input type="number" id="principal_input" min="0" value="1000000"> <!-- Principal amount cannot be negative -->
+                                <input type="number" id="principal_input" min="1" value="1000000"> <!-- Principal amount cannot be negative or null -->
                             </td>
                         </tr>
                         <tr>
@@ -22,7 +23,7 @@
                                 <label for="rate_range">Interest Rate</label>
                             </td>
                             <td>
-                                <input type="range" id="rate_range" step = "0.005" min="0" max="0.25" value="0.035" oninput="display_selected_rate()"> <!-- Interest rate cannot be negative -->
+                                <input type="range" id="rate_range" step = "0.005" min="0.01" max="0.20" value="0.035" oninput="display_selected_rate()"> <!-- Interest rate cannot be negative or null -->
                             </td>
                             <td>
                                 <p id="rate_par">3.5%</p> <!-- Consistent with rate range's default value but will be dynamically updated -->
